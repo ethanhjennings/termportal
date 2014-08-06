@@ -1,0 +1,11 @@
+{
+    "name": "termportal",
+    "author": "Ethan Jennings",
+    "version": "0.0.1",
+    "dependencies": {
+        "CBuffer": "^0.1.4",
+        "commander": "^2.3.0",
+        "express": "3.x",
+        "socket.io": "^1.0.6"
+    }
+}

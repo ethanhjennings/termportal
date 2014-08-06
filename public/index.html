@@ -1,0 +1,52 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/term.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/term-wrapper.js"></script>
+
+<link rel="stylesheet" href="/spinner.css">
+
+<style>
+    #term {
+        margin-top:50px;
+    }
+</style>
+
+</head>
+<body>
+<script>
+
+$(document).ready(function() {
+  
+    var socket = io.connect();
+
+    var term = new TermWrapper({
+      cols: 80,
+      rows: 24,
+    });
+
+    term.addToElement($('#term')[0]);
+
+    socket.on('disconnect', function() {
+          term.startLoading();
+    });
+
+    socket.on('catchup', function(messages) {
+        term.stopLoading();
+        $.each(messages,function (i,msg) {
+            term.write(msg);
+        });
+    });
+
+    socket.on('consoleUpdate', function(data) {
+        term.write(data);
+    });
+
+});
+
+</script>
+
+<div id="term"></div>
+</body>
+</html>
