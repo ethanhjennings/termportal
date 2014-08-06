@@ -10,7 +10,7 @@ function TermWrapper(options) {
 
 TermWrapper.prototype.addToElement = function(elementToAddTo) {
 	this.termParentElement = $(elementToAddTo);
-	this.containerDiv = $("<div id='formatTerm' style='font-family: monospace; margin: 0 auto;overflow:scroll;'></div>");
+	this.containerDiv = $("<div id='formatTerm' style='font-family: monospace; margin: 0 auto;overflow:hidden;'></div>");
 	this.termParentElement.append(this.containerDiv);
 	this.resizeTerm.call(this);
 	this.term.open(this.containerDiv[0]);
