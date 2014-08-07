@@ -6,7 +6,7 @@ Terminal colors are supported!
 
 ## Installation
 
-```shell
+```bash
 $ npm install termportal -g
 ```
 
@@ -15,13 +15,13 @@ This will install it globally. Leave off the `-g` if you only want to install lo
 ## Usage
 
 If you just want to display a command that runs for a short amount of time you can pipe it directly, for example:
-```shell
-echo "Hello world!" | termportal
+```bash
+$ echo "Hello world!" | termportal
 ```
 
 If the command is longer running and you want to see output in realtime you need to un-buffer the pipe which can be done with stdbuf, for example:
-```shell
-stdbuf -oL -eL <your command> | termportal
+```bash
+$ stdbuf -oL -eL <your command> | termportal
 ```
 
 To view the web output go to:
