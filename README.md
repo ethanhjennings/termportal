@@ -1,15 +1,13 @@
 #Terminal Portal
 
-This is a command line tool built using node.js which displays terminal output piped in from stdin on a webpage that's also hosted by the same command. It's like the 'tee' command except it outputs to the web instead of to a file.
+This is a command line tool built using node.js which displays terminal output piped in from stdin on a read-only webpage that's also hosted by the same command. It's like the 'tee' command except it outputs to the web instead of to a file.
 
 Terminal colors are supported!
 
 ## Installation
 
 ```shell
-git clone https://github.com/ethanhjennings/termportal
-cd termportal
-npm install -g
+$ npm install termportal -g
 ```
 
 This will install it globally. Leave off the `-g` if you only want to install locally.
@@ -35,7 +33,7 @@ Use the `-p` option if you want to use a different port.
 
 ## Issues
 - No security!
-- Commands like "top" and other commands that move the cursor stop displaying correctly after a while.
+- Commands like "top" that move the cursor stop displaying correctly after a while.
 
 ## Kudos
 
