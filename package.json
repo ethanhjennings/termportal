@@ -1,13 +1,20 @@
 {
     "name": "termportal",
-    "author": "Ethan Jennings",
+    "author": "Ethan Jennings <ethanj.me@gmail.com> (http://ethanj.me)",
     "version": "0.0.1",
+    "description": "Hosts a webserver that displays terminal output from a command.",
+    "keywords": ["terminal", "term", "pipe", "tee", "web", "mirror", "portal"],
     "dependencies": {
         "CBuffer": "^0.1.4",
         "commander": "^2.3.0",
         "express": "3.x",
         "socket.io": "^1.0.6"
     },
+    "respository": {
+        "type": "git",
+        "url": "https://github.com/ethanhjennings/termportal"
+    },
+    "preferGlobal": true,
     "bin": {
         "termportal": "./bin/command"
     }
