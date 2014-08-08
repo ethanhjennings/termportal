@@ -1,7 +1,7 @@
 {
     "name": "termportal",
     "author": "Ethan Jennings <ethanj.me@gmail.com> (http://ethanj.me)",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Hosts a webserver that displays terminal output from a command.",
     "keywords": ["terminal", "term", "pipe", "tee", "web", "mirror", "portal"],
     "dependencies": {

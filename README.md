@@ -26,7 +26,7 @@ $ stdbuf -oL -eL <your command> | termportal
 
 To view the web output go to:
 ```
-http://localhost:3000
+http://localhost:4000
 ```
 
 Use the `-p` option if you want to use a different port.

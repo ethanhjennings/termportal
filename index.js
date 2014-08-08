@@ -10,7 +10,7 @@ var updateBuffer = "";
 var currentBuffer = catchupBuffer;
 
 program
- 	.version('0.0.1')
+ 	.version('0.0.2')
  	.option('-p, --port <port_number>', 'Port number')
  	.parse(process.argv);
 
