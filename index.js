@@ -14,7 +14,7 @@ program
  	.option('-p, --port <port_number>', 'Port number')
  	.parse(process.argv);
 
-var port = program.port || 1337;
+var port = program.port || 4000;
 
 app.use(express.static(__dirname + '/public'));
 
@@ -29,10 +29,10 @@ process.stdin.on('data', function(data) {
 
     currentBuffer.push(data);
 
-    process.stdout.write(data);
+    console.log(data);
 });
 
-http.listen(3000, function(){
- 	console.log('listening on *:3000');
+http.listen(port, function(){
+ 	console.log('listening on *:' + port);
 });
 
